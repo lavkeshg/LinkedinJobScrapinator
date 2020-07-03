@@ -18,14 +18,7 @@ if __name__ == "__main__":
     else:
         web_address = 'https://www.linkedin.com/jobs/search/?pivotType=jymbii'
     user = User()
-    last = 'n'
-    if os.path.isfile('./src/.res/user.json'):
-        last = input('Login with last saved user? (Y): ')
-    if last.strip().lower() in ['y', 'yes']:
-        username, password = user.loadUser()
-    elif last.strip().lower() in ['n','no']:
-        username, password = user.createUser()
-        user.saveUser()
+    username, password = user.login()
     ls.login(username, password)
     time.sleep(0.5)
     ls.checkLogin()
@@ -66,6 +59,7 @@ if __name__ == "__main__":
             link_score, dump, tag = ls.scoreJob(search_tag, qualification)
         except:
             qualification = ''
+            tag = {None}
         if dump:
             continue
         links.append(link)

@@ -1,3 +1,4 @@
+import os
 from cryptography.fernet import Fernet
 import json
 
@@ -10,7 +11,6 @@ class User:
     def createUser(self):
         self.user_id = str(input('Enter Linkedin userid: '))
         self.password = str(input('Enter password: '))
-        return self.user_id, self.password
 
     def loadUser(self):
         with open('./src/.res/user.json', 'r') as file:
@@ -19,7 +19,6 @@ class User:
             cs = Fernet(key)
             self.user_id = login['user_id']
             self.password = str(cs.decrypt(login['password'].encode()).decode())
-            return self.user_id, self.password
 
     def saveUser(self):
         save = input('Save User on device? (Y): ')
@@ -34,3 +33,14 @@ class User:
             }
             with open('./src/.res/user.json', 'w') as file:
                 json.dump(dict, file)
+
+    def login(self):
+        last = 'n'
+        if os.path.isfile('./src/.res/user.json'):
+            last = input('Login with last saved user? (Y): ')
+        if last.strip().lower() in ['y', 'yes']:
+            self.loadUser()
+        elif last.strip().lower() in ['n', 'no']:
+            self.createUser()
+            self.saveUser()
+        return self.user_id, self.password
