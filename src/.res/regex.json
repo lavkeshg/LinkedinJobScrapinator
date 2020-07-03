@@ -1,0 +1,3 @@
+{
+   "Default":"([Ee]ntry-[Ll]evel|[Rr]ecent [Gg]raduate)|(\\d[)\\+ ]*?[Yy]ears?.*?[Ee]xperience)|(\\d[)\\+ ]*?[Yy]ears?)|(Sec[uritye]+? [Cc]learance|[U.S ]*?[Cc]itizen[a-zA-Z ]*?[Rr]equired)|(CPLEX)|(SQL|[Pp]ython|[Tt]ableau)|(Hadoop|Hive|Spark)|(AWS|GCP)"
+}
