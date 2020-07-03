@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
     if not os.path.isdir(os.getcwd()+'\output'):
         try:
-            os.mkdir(path)
+            os.mkdir('./output')
         except OSError:
             print("Creation of the directory %s failed" % path)
 
