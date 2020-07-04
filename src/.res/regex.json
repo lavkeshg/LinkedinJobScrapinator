@@ -1,3 +1,3 @@
 {
-   "Default":"([Ee]ntry-[Ll]evel|[Rr]ecent [Gg]raduate)|(\\d[)\\+ ]*?[Yy]ears?.*?[Ee]xperience)|(\\d[)\\+ ]*?[Yy]ears?)|(Sec[uritye]+? [Cc]learance|[U.S ]*?[Cc]itizen[a-zA-Z ]*?[Rr]equired)|(CPLEX)|(SQL|[Pp]ython|[Tt]ableau)|(Hadoop|Hive|Spark)|(AWS|GCP)"
+   "Default":"([Ee]ntry-[Ll]evel|[Rr]ecent [Gg]raduate)|(\\d[)\\+ ]*?[Yy]ears?.*?[Ee]xperience)|(\\d[)\\+ ]*?[Yy]ears?)|(Sec[uritye]+? [Cc]learance|[U.S ]*?[Cc]itizen\w*?[Rr]equired|[Mm]ust\w*?[U.S ]*?[Cc]itizen|[U.S ]*?[Cc]itizen)|(CPLEX)|(SQL|[Pp]ython|[Tt]ableau)|(Hadoop|Hive|Spark)|(AWS|GCP)"
 }
